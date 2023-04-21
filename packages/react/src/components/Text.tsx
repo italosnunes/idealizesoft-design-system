@@ -6,7 +6,7 @@ export const Text = styled("p", {
   fontFamily: "$default",
   lineHeight: "$base",
   margin: 0,
-  color: "$gray200",
+  color: "$gray700",
 
   variants: {
     size: {

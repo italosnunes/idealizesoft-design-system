@@ -6,30 +6,24 @@ const meta: Meta<TextAreaProps> = {
   component: TextArea,
 
   args: {},
-  decorators: [
-    (Story) => {
-      return (
-        <Box
-          as="label"
-          css={{ display: "flex", flexDirection: "column", gap: "$2" }}
-        >
-          <Text size="sm">Observations</Text>
-          {Story()}
-        </Box>
-      );
-    },
-  ],
 };
 
 export default meta;
 type Story = StoryObj<TextAreaProps>;
 export const Primary: Story = {
   args: {
+    label: "Observations",
+    placeholder: "add any observation",
+  },
+};
+export const WithoutLabel: Story = {
+  args: {
     placeholder: "add any observation",
   },
 };
 export const Disabled: Story = {
   args: {
+    label: "Observations",
     disabled: true,
   },
 };

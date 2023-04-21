@@ -6,35 +6,30 @@ const meta: Meta<TextInputProps> = {
   component: TextInput,
 
   args: {},
-  decorators: [
-    (Story) => {
-      return (
-        <Box
-          as="label"
-          css={{ display: "flex", flexDirection: "column", gap: "$2" }}
-        >
-          <Text size="sm">Email address</Text>
-          {Story()}
-        </Box>
-      );
-    },
-  ],
 };
 
 export default meta;
 type Story = StoryObj<TextInputProps>;
 export const Primary: Story = {
   args: {
+    label: "Name",
+    placeholder: "type your name",
+  },
+};
+export const WithoutLabel: Story = {
+  args: {
     placeholder: "type your name",
   },
 };
 export const Disabled: Story = {
   args: {
+    label: "Name",
     disabled: true,
   },
 };
 export const WithPrefix: Story = {
   args: {
+    label: "Name",
     prefix: "idealizesoft.com/",
   },
 };

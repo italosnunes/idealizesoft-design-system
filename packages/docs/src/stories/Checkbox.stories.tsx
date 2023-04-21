@@ -12,7 +12,6 @@ const meta: Meta<CheckboxProps> = {
           as="label"
           css={{ display: "flex", flexDirection: "row", gap: "$2" }}
         >
-          <Text size="sm">Accept terms of use</Text>
           {Story()}
         </Box>
       );
@@ -28,5 +27,19 @@ export const Primary: Story = {
 export const Disabled: Story = {
   args: {
     disabled: true,
+  },
+};
+
+export const RightLabel: Story = {
+  args: {
+    labelLocation: "right",
+    label: "Accept terms of contract",
+  },
+};
+
+export const DownLabel: Story = {
+  args: {
+    labelLocation: "down",
+    label: "Accept terms of contract",
   },
 };

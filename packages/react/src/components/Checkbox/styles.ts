@@ -4,7 +4,7 @@ import { styled, keyframes } from "../../styles";
 export const CheckBoxContainer = styled(Checkbox.Root, {
   width: "$6",
   height: "$6",
-  backgroundColor: "$gray700",
+  backgroundColor: "$white",
   borderRadius: "$xs",
   lineHeight: 0,
   cursor: "pointer",
@@ -14,21 +14,20 @@ export const CheckBoxContainer = styled(Checkbox.Root, {
   justifyContent: "center",
   alignItems: "center",
 
-  border: "2px solid $gray700",
+  border: "1.5px solid $gray500",
 
   '&[data-state="checked"]': {
-    backgroundColor: "$purple300",
-    borderColor: "$purple300",
+    backgroundColor: "$purple500",
+    borderColor: "$purple500",
   },
 
   '&[data-state="unchecked"]': {
-    backgroundColor: "$gray700",
-    borderColor: "$gray700",
+    backgroundColor: "transparent",
+    borderColor: "$gray500",
   },
 
   "&:disabled": {
-    backgroundColor: "$gray200",
-    borderColor: "$gray200",
+    opacity: 0.32,
   },
 });
 
@@ -52,8 +51,8 @@ const slideOut = keyframes({
 
 export const CheckBoxIndicator = styled(Checkbox.Indicator, {
   color: "$white",
-  width: "$4",
-  height: "$4",
+  width: "$6",
+  height: "$6",
 
   '&[data-state="checked"]': {
     animation: `${slideIn} 200ms ease-out`,
@@ -61,5 +60,44 @@ export const CheckBoxIndicator = styled(Checkbox.Indicator, {
 
   '&[data-state="unchecked"]': {
     animation: `${slideOut} 200ms ease-out`,
+  },
+});
+
+export const CheckboxLabel = styled("span", {
+  fontSize: "$md",
+  fontWeight: "$medium",
+  fontFamily: "$default",
+  lineHeight: "$shorter",
+  color: "$white",
+});
+
+export const CheckboxWrapper = styled("div", {
+  padding: "$2",
+  borderRadius: "$md",
+  "&:not(:disabled):hover": {
+    backgroundColor: "$gray200",
+  },
+});
+
+export const Content = styled("div", {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  variants: {
+    labelLocation: {
+      undefined: {},
+      right: {
+        flexDirection: "row",
+        gap: "$2",
+      },
+      down: {
+        gap: "$1",
+        flexDirection: "column",
+      },
+    },
+  },
+
+  defaultVariants: {
+    labelLocation: undefined,
   },
 });

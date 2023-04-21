@@ -33,4 +33,9 @@ export const {
     radii: radii,
     space: space,
   },
+  utils: {
+    linearGradient: (value: any) => ({
+      backgroundImage: `linear-gradient(${value})`,
+    }),
+  },
 });

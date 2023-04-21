@@ -8,14 +8,15 @@ export interface ButtonProps extends ComponentProps<typeof Button> {
 
 export const Button = styled("button", {
   all: "unset",
-  borderRadius: "$sm",
-  fontSize: "$sm",
+  fontSize: "$md",
   fontWeight: "$medium",
   fontFamily: "$default",
   textAlign: "center",
+
+  borderRadius: "$xs",
   minWidth: 120,
   boxSizing: "border-box",
-  padding: "0 $4",
+  padding: "$4 $8",
 
   display: "flex",
   alignItems: "center",
@@ -38,28 +39,28 @@ export const Button = styled("button", {
     variant: {
       primary: {
         color: "$white",
-        backgroundColor: "$purple500",
+        linearGradient: "82.44deg, $purple600 3.25%, $purple400 100%",
 
         "&:not(:disabled):hover": {
-          backgroundColor: "$purple300",
+          backgroundImage: "none",
+          backgroundColor: "$purple400",
         },
 
         "&:disabled": {
-          backgroundColor: "$gray600",
+          opacity: 0.32,
         },
       },
       secondary: {
-        color: "$purple300",
-        border: "2px solid $purple500",
+        color: "$purple500",
+        border: "1px solid $purple500",
 
         "&:not(:disabled):hover": {
-          backgroundColor: "$purple500",
-          color: "$white",
+          border: "1px solid $purple400",
+          color: "$purple400",
         },
 
         "&:disabled": {
-          color: "$gray200",
-          borderColor: "$gray200",
+          opacity: 0.32,
         },
       },
       tertiary: {
