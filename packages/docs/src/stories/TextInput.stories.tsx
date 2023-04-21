@@ -14,7 +14,6 @@ export const Primary: Story = {
   args: {
     label: "Name",
     placeholder: "type your name",
-    sizeContainer: "md",
   },
 };
 export const Small: Story = {
