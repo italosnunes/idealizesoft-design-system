@@ -14,6 +14,14 @@ export const Primary: Story = {
   args: {
     label: "Name",
     placeholder: "type your name",
+    sizeContainer: "md",
+  },
+};
+export const Small: Story = {
+  args: {
+    label: "Name",
+    placeholder: "type your name",
+    sizeContainer: "sm",
   },
 };
 export const WithoutLabel: Story = {
@@ -31,5 +39,6 @@ export const WithPrefix: Story = {
   args: {
     label: "Name",
     prefix: "idealizesoft.com/",
+    placeholder: "type your name",
   },
 };

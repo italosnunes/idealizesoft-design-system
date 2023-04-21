@@ -8,21 +8,45 @@ export const Container = styled("div", {
 
 export const TextInputLabel = styled("strong", {
   fontFamily: "$default",
-  fontSize: "$md",
   color: "$gray600",
   fontWeight: "$medium",
   padding: "0 $2",
+
+  variants: {
+    sizeContainer: {
+      sm: {
+        fontSize: "$sm",
+      },
+      md: {
+        fontSize: "$md",
+      },
+    },
+  },
+
+  defaultVariants: {
+    sizeContainer: "md",
+  },
 });
 
 export const TextInputContainer = styled("div", {
   backgroundColor: "$white",
-  padding: "$2 $4",
   borderRadius: "$md $md 0 0",
   boxSizing: "border-box",
   border: "1px solid $gray300",
   display: "flex",
   justifyContent: "space-between",
-  alignItems: "baseline",
+  alignItems: "center",
+
+  variants: {
+    sizeContainer: {
+      sm: {
+        padding: "$1 $3",
+      },
+      md: {
+        padding: "$2 $4",
+      },
+    },
+  },
 
   "&:focus-within": {
     borderBottom: "2px solid $gray400",
@@ -31,6 +55,10 @@ export const TextInputContainer = styled("div", {
   "&:has(input:disabled)": {
     opacity: 0.5,
     cursor: "not-allowed",
+  },
+
+  defaultVariants: {
+    sizeContainer: "sm",
   },
 });
 
@@ -58,7 +86,7 @@ export const Input = styled("input", {
     cursor: "not-allowed",
   },
 
-  "&:placeholder": {
+  "&::placeholder": {
     color: "$gray400",
   },
 });
