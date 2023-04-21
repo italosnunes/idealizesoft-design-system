@@ -1,0 +1,6 @@
+{
+  "name": "@idealizesoft-ui/eslint-config",
+  "main": "index.js",
+  "license": "ISC",
+  "private": true
+}

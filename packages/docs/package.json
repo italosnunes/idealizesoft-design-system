@@ -1,0 +1,41 @@
+{
+  "name": "@idealizesoft-ui/docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "build": "storybook build",
+    "deploy-storybook": "storybook-to-ghpages"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@idealizesoft-ui/eslint-config": "*",
+    "@idealizesoft-ui/react": "*",
+    "@idealizesoft-ui/tokens": "*",
+    "@idealizesoft-ui/ts-config": "*",
+    "phosphor-react": "^1.4.1",
+    "polished": "^4.2.2"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.21.4",
+    "@babel/preset-typescript": "^7.21.4",
+    "@storybook/addon-essentials": "^7.0.6",
+    "@storybook/addon-interactions": "^7.0.6",
+    "@storybook/addon-links": "^7.0.6",
+    "@storybook/blocks": "^7.0.6",
+    "@storybook/react": "^7.0.6",
+    "@storybook/react-webpack5": "^7.0.6",
+    "@storybook/storybook-deployer": "^2.8.16",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "@vitejs/plugin-react": "^3.1.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.0.6",
+    "typescript": "^5.0.4",
+    "vite": "^4.2.2"
+  }
+}
