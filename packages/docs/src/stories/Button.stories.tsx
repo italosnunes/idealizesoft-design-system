@@ -21,13 +21,6 @@ export const Secondary: Story = {
     children: "Create new",
   },
 };
-export const Tertiary: Story = {
-  args: {
-    variant: "tertiary",
-    size: "md",
-    children: "Cancel",
-  },
-};
 
 export const Small: Story = {
   args: {
