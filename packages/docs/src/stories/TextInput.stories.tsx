@@ -41,3 +41,11 @@ export const WithPrefix: Story = {
     placeholder: "type your name",
   },
 };
+
+export const Password: Story = {
+  args: {
+    label: "Password",
+    placeholder: "type your password",
+    mask: "password",
+  },
+};

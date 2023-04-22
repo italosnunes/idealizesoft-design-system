@@ -12,9 +12,20 @@ export interface TextInputProps extends ComponentProps<typeof Input> {
   prefix?: string;
   label?: string;
   sizeContainer?: "sm" | "md";
+  mask: "default" | "password";
 }
 export const TextInput = forwardRef<ElementRef<typeof Input>, TextInputProps>(
-  ({ prefix, size, label, sizeContainer, ...props }: TextInputProps, ref) => {
+  (
+    {
+      prefix,
+      size,
+      label,
+      mask = "default",
+      sizeContainer,
+      ...props
+    }: TextInputProps,
+    ref
+  ) => {
     return (
       <Container>
         {!!{ label } && (
@@ -22,7 +33,10 @@ export const TextInput = forwardRef<ElementRef<typeof Input>, TextInputProps>(
         )}
         <TextInputContainer sizeContainer={sizeContainer}>
           {!!prefix && <Prefix>{prefix}</Prefix>}
-          <Input ref={ref} {...props} />
+          {mask === "default" && <Input ref={ref} mask={mask} {...props} />}
+          {mask === "password" && (
+            <Input ref={ref} type="password" {...props} />
+          )}
         </TextInputContainer>
       </Container>
     );

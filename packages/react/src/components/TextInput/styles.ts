@@ -89,4 +89,19 @@ export const Input = styled("input", {
   "&::placeholder": {
     color: "$gray400",
   },
+
+  variants: {
+    mask: {
+      default: {
+        type: "text",
+      },
+      password: {
+        type: "password",
+      },
+    },
+  },
+
+  defaultVariants: {
+    mask: "default",
+  },
 });
