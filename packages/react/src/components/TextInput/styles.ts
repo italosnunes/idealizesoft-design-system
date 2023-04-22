@@ -69,6 +69,16 @@ export const Prefix = styled("span", {
   fontWeight: "$regular",
 });
 
+export const ButtonEyes = styled("button", {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  border: 0,
+  background: "transparent",
+  "& svg": {
+    color: "$gray500",
+  },
+});
 export const Input = styled("input", {
   fontFamily: "$default",
   fontSize: "$sm",

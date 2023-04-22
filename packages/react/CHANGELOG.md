@@ -1,5 +1,11 @@
 # @idealizesoft-ui/react
 
+## 2.0.4
+
+### Patch Changes
+
+- Add icon to password input text
+
 ## 2.0.3
 
 ### Patch Changes

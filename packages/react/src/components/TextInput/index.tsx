@@ -1,11 +1,13 @@
 import { ComponentProps } from "@stitches/react";
-import { ElementRef, forwardRef } from "react";
+import { ElementRef, forwardRef, useCallback, useState } from "react";
+import { FiEye, FiEyeOff } from "react-icons/fi";
 import {
   Container,
   Input,
   Prefix,
   TextInputContainer,
   TextInputLabel,
+  ButtonEyes,
 } from "./styles";
 
 export interface TextInputProps extends ComponentProps<typeof Input> {
@@ -26,6 +28,12 @@ export const TextInput = forwardRef<ElementRef<typeof Input>, TextInputProps>(
     }: TextInputProps,
     ref
   ) => {
+    const [iconPassword, setIconPassword] = useState(false);
+
+    const changeIconPassword = useCallback(() => {
+      setIconPassword(!iconPassword);
+    }, [iconPassword]);
+
     return (
       <Container>
         {!!{ label } && (
@@ -35,7 +43,17 @@ export const TextInput = forwardRef<ElementRef<typeof Input>, TextInputProps>(
           {!!prefix && <Prefix>{prefix}</Prefix>}
           {mask === "default" && <Input ref={ref} mask={mask} {...props} />}
           {mask === "password" && (
-            <Input ref={ref} type="password" {...props} />
+            <>
+              <Input
+                ref={ref}
+                type={iconPassword ? "text" : "password"}
+                {...props}
+              />
+              <ButtonEyes type="button" onClick={changeIconPassword}>
+                {iconPassword && <FiEye size={20} />}
+                {!iconPassword && <FiEyeOff size={20} />}
+              </ButtonEyes>
+            </>
           )}
         </TextInputContainer>
       </Container>
