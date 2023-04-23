@@ -29,6 +29,14 @@ export const Outline: Story = {
   },
 };
 
+export const OutlineSmall: Story = {
+  args: {
+    variant: "outline",
+    size: "sm",
+    children: "Create new",
+  },
+};
+
 export const Small: Story = {
   args: {
     size: "sm",

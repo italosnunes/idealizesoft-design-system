@@ -1,5 +1,11 @@
 # @idealizesoft-ui/react
 
+## 2.0.5
+
+### Patch Changes
+
+- Add outline button\
+
 ## 2.0.4
 
 ### Patch Changes
