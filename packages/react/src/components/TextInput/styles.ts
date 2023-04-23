@@ -20,6 +20,9 @@ export const TextInputLabel = styled("strong", {
       md: {
         fontSize: "$md",
       },
+      lg: {
+        fontSize: "$lg",
+      },
     },
   },
 
@@ -36,6 +39,7 @@ export const TextInputContainer = styled("div", {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
+  height: 32,
 
   variants: {
     sizeContainer: {
@@ -44,6 +48,9 @@ export const TextInputContainer = styled("div", {
       },
       md: {
         padding: "$2 $4",
+      },
+      lg: {
+        padding: "$3 $5",
       },
     },
   },
@@ -70,6 +77,8 @@ export const Prefix = styled("span", {
 });
 
 export const ButtonEyes = styled("button", {
+  width: 32,
+  height: 32,
   display: "flex",
   justifyContent: "center",
   alignItems: "center",

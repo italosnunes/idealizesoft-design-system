@@ -21,6 +21,13 @@ export const Secondary: Story = {
     children: "Create new",
   },
 };
+export const Outline: Story = {
+  args: {
+    variant: "outline",
+    size: "md",
+    children: "Create new",
+  },
+};
 
 export const Small: Story = {
   args: {

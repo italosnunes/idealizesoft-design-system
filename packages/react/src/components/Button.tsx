@@ -68,6 +68,18 @@ export const Button = styled("button", {
           opacity: 0.32,
         },
       },
+      outline: {
+        color: "$purple500",
+        border: "none",
+
+        "&:not(:disabled):hover": {
+          color: "$purple400",
+        },
+
+        "&:disabled": {
+          opacity: 0.32,
+        },
+      },
     },
     size: {
       sm: {

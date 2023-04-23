@@ -23,6 +23,14 @@ export const Small: Story = {
     sizeContainer: "sm",
   },
 };
+
+export const Large: Story = {
+  args: {
+    label: "Name",
+    placeholder: "type your name",
+    sizeContainer: "lg",
+  },
+};
 export const WithoutLabel: Story = {
   args: {
     placeholder: "type your name",
