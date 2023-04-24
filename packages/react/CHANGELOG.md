@@ -1,5 +1,11 @@
 # @idealizesoft-ui/react
 
+## 2.0.6
+
+### Patch Changes
+
+- Add new type textInput
+
 ## 2.0.5
 
 ### Patch Changes

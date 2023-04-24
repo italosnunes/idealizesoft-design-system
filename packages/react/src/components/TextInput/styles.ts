@@ -4,6 +4,27 @@ export const Container = styled("div", {
   display: "flex",
   flexDirection: "column",
   gap: "$1",
+
+  variants: {
+    marginContainer: {
+      undefined: {
+        margin: "0 0",
+      },
+      sm: {
+        margin: "$1 0",
+      },
+      md: {
+        margin: "$2 0",
+      },
+      lg: {
+        margin: "$3 0",
+      },
+    },
+  },
+
+  defaultVariants: {
+    marginContainer: "undefined",
+  },
 });
 
 export const TextInputLabel = styled("strong", {
@@ -39,18 +60,18 @@ export const TextInputContainer = styled("div", {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  height: 32,
+  padding: "$1 $3",
 
   variants: {
     sizeContainer: {
       sm: {
-        padding: "$1 $3",
+        height: "$8",
       },
       md: {
-        padding: "$2 $4",
+        height: "$10",
       },
       lg: {
-        padding: "$3 $5",
+        height: "$12",
       },
     },
   },
@@ -77,8 +98,9 @@ export const Prefix = styled("span", {
 });
 
 export const ButtonEyes = styled("button", {
-  width: 32,
-  height: 32,
+  maxWidth: 32,
+  maxheight: 32,
+  width: "fit-content",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",

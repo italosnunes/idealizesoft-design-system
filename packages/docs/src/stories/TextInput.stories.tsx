@@ -1,5 +1,5 @@
 import { StoryObj, Meta } from "@storybook/react";
-import { Box, Text, TextInput, TextInputProps } from "@idealizesoft-ui/react";
+import { TextInput, TextInputProps } from "@idealizesoft-ui/react";
 
 const meta: Meta<TextInputProps> = {
   title: "Form/Text Input",
@@ -14,6 +14,13 @@ export const Primary: Story = {
   args: {
     label: "Name",
     placeholder: "type your name",
+  },
+};
+export const PrimaryWithLargeMargin: Story = {
+  args: {
+    label: "Name",
+    placeholder: "type your name",
+    marginContainer: "lg",
   },
 };
 export const Small: Story = {

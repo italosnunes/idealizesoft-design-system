@@ -1,5 +1,10 @@
-import { ComponentProps } from "@stitches/react";
-import { ElementRef, forwardRef, useCallback, useState } from "react";
+import {
+  ElementRef,
+  forwardRef,
+  useCallback,
+  useState,
+  ComponentProps,
+} from "react";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import {
   Container,
@@ -13,17 +18,18 @@ import {
 export interface TextInputProps extends ComponentProps<typeof Input> {
   prefix?: string;
   label?: string;
-  sizeContainer?: "sm" | "md";
+  sizeContainer?: "sm" | "md" | "lg";
+  marginContainer?: "sm" | "md" | "lg";
   mask: "default" | "password";
 }
 export const TextInput = forwardRef<ElementRef<typeof Input>, TextInputProps>(
   (
     {
       prefix,
-      size,
       label,
       mask = "default",
       sizeContainer,
+      marginContainer,
       ...props
     }: TextInputProps,
     ref
@@ -35,8 +41,8 @@ export const TextInput = forwardRef<ElementRef<typeof Input>, TextInputProps>(
     }, [iconPassword]);
 
     return (
-      <Container>
-        {!!{ label } && (
+      <Container marginContainer={marginContainer}>
+        {!!label && (
           <TextInputLabel sizeContainer={sizeContainer}>{label}</TextInputLabel>
         )}
         <TextInputContainer sizeContainer={sizeContainer}>
